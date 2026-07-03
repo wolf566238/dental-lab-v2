@@ -1,1 +1,61 @@
-# dental-lab-v2
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dental Magic Lab</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <img src="logo.png" class="logo" alt="logo"/>
+      <h1 id="title">مختبر الأسنان السحري</h1>
+
+      <div class="controls">
+        <button onclick="toggleLang()">🌐</button>
+        <button onclick="toggleTheme()">🌙</button>
+      </div>
+    </header>
+
+    <form id="orderForm">
+
+      <input type="text" id="name" placeholder="الاسم الكامل" required />
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required />
+      <input type="text" id="phone" placeholder="رقم الهاتف" required />
+
+      <input type="text" id="doctor" placeholder="اسم الطبيب" />
+      <input type="text" id="patient" placeholder="اسم المريض" />
+
+      <select id="type">
+        <option value="تلبيسة">تلبيسة</option>
+        <option value="زراعة">زراعة</option>
+        <option value="تقويم">تقويم</option>
+        <option value="عدسات">عدسات</option>
+      </select>
+
+      <select id="priority">
+        <option value="عادي">عادي</option>
+        <option value="مستعجل">مستعجل</option>
+      </select>
+
+      <input type="date" id="date"/>
+
+      <textarea id="notes" placeholder="ملاحظات"></textarea>
+
+      <input type="file" id="files" multiple />
+
+      <button type="submit" id="submitBtn">إرسال</button>
+
+    </form>
+
+    <p id="status"></p>
+
+  </div>
+
+  <script src="app.js"></script>
+  <script src="translations.js"></script>
+</body>
+</html>
